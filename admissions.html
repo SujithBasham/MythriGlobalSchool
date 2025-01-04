@@ -12,7 +12,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.jpg" alt="Mythri Global School Logo" style="height: 50px;">
             </a>
         </div>
@@ -21,63 +21,76 @@
     <!-- Admissions Section -->
     <section id="admissions" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Admissions Form</h2>
-            <form id="admissionsForm" class="needs-validation" novalidate>
-                <!-- Student Name -->
+            <h2 class="text-center mb-4">Get in Touch</h2>
+            <form id="admissionForm" action="http://localhost:3000/submit" method="POST" class="p-4 shadow-lg rounded bg-light">
+                <!-- Parent Information -->
                 <div class="mb-3">
-                    <label for="studentName" class="form-label">Student Name</label>
-                    <input type="text" class="form-control" id="studentName" name="studentName" placeholder="Enter full name" required>
-                    <div class="invalid-feedback">Please enter the student's name.</div>
+                    <label class="form-label">Parent Information</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="parentFirstName" name="parentFirstName" placeholder="Enter First Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" id="parentLastName" name="parentLastName" placeholder="Enter Last Name" required>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Grade Selection -->
+                
+                <!-- Student Information -->
                 <div class="mb-3">
-                    <label for="grade" class="form-label">Grade Applying For</label>
+                    <label for="studentName" class="form-label">Student's Full Name</label>
+                    <input type="text" class="form-control" id="studentName" name="studentName" placeholder="Enter Student's Full Name" required>
+                </div>
+                
+                <!-- Email -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email Address" required>
+                </div>
+                
+                <!-- Phone -->
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Phone Number" required>
+                </div>
+                
+                <!-- Grade -->
+                <div class="mb-3">
+                    <label for="grade" class="form-label">Select Grade</label>
                     <select class="form-select" id="grade" name="grade" required>
                         <option value="" disabled selected>Select a grade</option>
+                        <option value="Kindergarten">Kindergarten</option>
+                        <option value="LKG">LKG</option>
+                        <option value="UKG">UKG</option>
                         <option value="Grade 1">Grade 1</option>
                         <option value="Grade 2">Grade 2</option>
                         <option value="Grade 3">Grade 3</option>
-                        <!-- Add more options as needed -->
+                        <option value="Grade 4">Grade 4</option>
+                        <option value="Grade 5">Grade 5</option>
+                        <option value="Grade 6">Grade 6</option>
+                        <option value="Grade 7">Grade 7</option>
+                        <option value="Grade 8">Grade 8</option>
+                        <option value="Grade 9">Grade 9</option>
+                        <option value="Grade 10">Grade 10</option>
                     </select>
-                    <div class="invalid-feedback">Please select a grade.</div>
                 </div>
-
-                <!-- Parent/Guardian Name -->
+    
+                <!-- Additional Information -->
                 <div class="mb-3">
-                    <label for="parentName" class="form-label">Parent/Guardian Name</label>
-                    <input type="text" class="form-control" id="parentName" name="parentName" placeholder="Enter parent/guardian name" required>
-                    <div class="invalid-feedback">Please enter the parent or guardian's name.</div>
+                    <label for="description" class="form-label">Additional Information</label>
+                    <textarea class="form-control" id="description" name="description" rows="4" placeholder="Provide any additional information"></textarea>
                 </div>
-
-                <!-- Email -->
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required>
-                    <div class="invalid-feedback">Please enter a valid email address.</div>
-                </div>
-
-                <!-- Phone Number -->
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter phone number" required>
-                    <div class="invalid-feedback">Please enter a valid phone number.</div>
-                </div>
-
-                <!-- Address -->
-                <div class="mb-3">
-                    <label for="address" class="form-label">Address</label>
-                    <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter full address" required></textarea>
-                    <div class="invalid-feedback">Please enter the address.</div>
-                </div>
-
+    
                 <!-- Submit Button -->
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                 </div>
             </form>
         </div>
     </section>
+    
+    
+    
 
     <!-- Footer -->
     <footer class="bg-primary text-white py-3">

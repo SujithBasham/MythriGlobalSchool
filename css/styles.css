@@ -73,14 +73,35 @@ footer h3 {
 footer p {
   margin: 5px 0;
 }
+
+#admissions .form-control, 
+#admissions .form-select, 
+#admissions textarea {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+#admissions .row .form-control {
+    margin-bottom: 15px;
+}
+
+#admissions button {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 10px;
+}
+
 #admissions {
-  background-color: #f9f9f9;
-  padding: 40px 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 #admissions h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
 }
+
